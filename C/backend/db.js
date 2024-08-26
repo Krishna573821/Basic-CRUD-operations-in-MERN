@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
+
+const URL = process.env.MONGOURL
 export const db = async () =>{
     try {
-        await mongoose.connect("mongodb+srv://krishna573821:bluewhale@learningcrud.x5fej.mongodb.net/?retryWrites=true&w=majority&appName=learningcrud")
+        await mongoose.connect(URL)
 
         console.log("mongoDB connected successfully");
         

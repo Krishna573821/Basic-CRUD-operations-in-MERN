@@ -1,3 +1,4 @@
+import "dotenv/config"
 import express from "express";
 import {db} from "./db.js";
 import { User } from "./models/user.model.js";
@@ -5,7 +6,7 @@ import { User } from "./models/user.model.js";
 
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 db();
 
